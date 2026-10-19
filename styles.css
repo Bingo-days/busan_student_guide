@@ -1,0 +1,175 @@
+/* Busan Student Guide - basic stylesheet */
+:root {
+  --sea: #074994;
+  --sea-dark: #08315f;
+  --sky: #eaf4f9;
+  --sun: #f2b632;
+  --text: #061d6e;
+  --line: #cfe0ea;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: #ffffff;
+}
+
+header {
+  background: var(--sea);
+  color: #ffffff;
+  padding: 0 20px;
+}
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.logo { font-size: 1.3rem; font-weight: 700; padding: 14px 0; }
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 16px 12px;
+}
+nav a:hover, nav a:focus { background: var(--sea-dark); }
+nav a.active { border-bottom: 4px solid var(--sun); }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 48px; }
+
+h1 { color: var(--sea-dark); font-size: 2.2rem; line-height: 1.2; margin-top: 0; }
+h2 { color: var(--sea); margin-top: 36px; }
+
+.hero {
+  background: var(--sky);
+  border-left: 8px solid var(--sun);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.hero p { font-size: 1.15rem; max-width: 640px; }
+
+.button {
+  display: inline-block;
+  background: var(--sea);
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.button:hover { background: var(--sea-dark); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.box { border: 1px solid var(--line); padding: 18px; }
+.box h3 { margin-top: 0; color: var(--sea-dark); }
+
+.event { border-left: 6px solid var(--sea); background: var(--sky); padding: 14px 18px; margin-bottom: 16px; }
+.event h3 { margin: 0 0 4px; }
+.event .meta { color: #4a5f6b; margin: 0; }
+
+.note { background: #fff6dc; border: 1px solid var(--sun); padding: 12px 16px; }
+
+.guide { border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+
+form label { display: block; margin-top: 14px; font-weight: 600; }
+form input, form select, form textarea {
+  width: 100%;
+  max-width: 520px;
+  padding: 10px;
+  margin-top: 4px;
+  font: inherit;
+  border: 1px solid #9db8c7;
+  border-radius: 4px;
+}
+form button {
+  margin-top: 18px;
+  background: var(--sea);
+  color: #ffffff;
+  border: 0;
+  padding: 11px 24px;
+  font: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form button:hover { background: var(--sea-dark); }
+
+footer { background: var(--sea-dark); color: #d7e8f1; text-align: center; padding: 20px; }
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
+
+/* ---- Home page additions ---- */
+.hero-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: center;
+}
+.button-light {
+  background: #ffffff;
+  color: var(--sea-dark);
+  border: 2px solid var(--sea);
+  margin-left: 8px;
+}
+.button-light:hover { background: var(--sky); }
+
+.photo-box, .hero img {
+  width: 100%;
+  min-height: 220px;
+  border-radius: 6px;
+}
+.photo-box {
+  background: #bcd9e8;
+  color: var(--sea-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+}
+.hero img { object-fit: cover; }
+
+.quick {
+  display: block;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--sea);
+  padding: 16px;
+  text-decoration: none;
+  color: var(--text);
+}
+.quick strong { display: block; color: var(--sea-dark); font-size: 1.1rem; }
+.quick:hover { background: var(--sky); }
+
+.updated { color: #4a5f6b; font-size: 0.9rem; margin-top: 32px; }
+footer p { margin: 4px 0; }
+
+/* ---- Pictures ---- */
+.banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.photo-card { border: 1px solid var(--line); }
+.photo-card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.photo-card .text { padding: 14px 18px 18px; }
+.photo-card h3 { margin: 0 0 6px; color: var(--sea-dark); }
+
+@media (max-width: 600px) {
+  .banner { height: 180px; }
+}
+
+.hero img { object-fit: cover; display: block; }

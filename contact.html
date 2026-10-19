@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Busan Student Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">Busan Student Guide</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="guides.html">Guides</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>Contact</h1>
+    <p>Use this form to ask about advertising, report incorrect information, or suggest something to add.</p>
+
+    <form action="#" method="post">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option>Advertising</option>
+        <option>Change existing information</option>
+        <option>Add new information</option>
+        <option>Other</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      
+    </form>
+    <button class='button' type="submit">Send message</button>
+  </main>
+  <footer>
+    <p>Made by students, for students.</p>
+  </footer>
+</body>
+</html>
